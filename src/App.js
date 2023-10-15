@@ -2,6 +2,7 @@
 import { Route, Routes } from 'react-router-dom';
 import { lazy } from 'react';
 import { Layout } from './Layout/Layout';
+import { AppWrapper } from './App.styled';
 
 
 const Home = lazy(() => import('./Home/Home'));
@@ -12,7 +13,7 @@ const Skills = lazy(() => import("./Skills/Skills"))
 
 function App() {
   return (
-    <div>
+    <AppWrapper>
       <Routes>
         <Route path='/' element={<Layout/>}>
         <Route index element={<Home/>}></Route>
@@ -23,7 +24,7 @@ function App() {
         </Route>
       </Routes>
       
-    </div>
+    </AppWrapper>
   );
 }
 
